@@ -5,4 +5,7 @@
 首先statement的函数过长，需要通过抽取局部变量与参数，然后将其提取参数。
 局部变量为each和thisAmount。thisAmount在switch语句中使用，因此可以将其抽出成为函数。
 
+# 第二步
+我们上面抽取出来的函数实际上一些命名非常糟糕，比如each, thisAmount，我们要修正它们。
+
 
