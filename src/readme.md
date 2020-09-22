@@ -24,5 +24,7 @@ double totalAmount = 0;
 int frequentRenterPoints = 0;
 由于这两个变量在循环中使用，所以我们抽取的函数也要抽取循环。
 
-
+# 第七步
+经过上面的重构，当我们再添加一个功能的时候，就很简单了，而且如果要修改一个计费逻辑的话，就只需要修改一处代码即可。
+htmlStatement
 
