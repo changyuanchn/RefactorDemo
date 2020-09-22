@@ -18,4 +18,11 @@
 # 第五步
 计算常客积分这部分代码实际上也跟customer没多大关系，这部分也是跟Rental有关，因此将其提炼出函数，然后放到Rental中
 
+# 第六步
+我们发现还是有两个临时变量，这里要将其优化掉，依据Replace Tmp with Query.
+double totalAmount = 0;
+int frequentRenterPoints = 0;
+由于这两个变量在循环中使用，所以我们抽取的函数也要抽取循环。
+
+
 
