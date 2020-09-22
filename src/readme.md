@@ -41,3 +41,11 @@ htmlStatement
 
 # 第十步
 下面我们将getCharge搬迁到Price类里面去。
+
+# 第十一步
+下面就是拆分getCharge到各个子类中。这样也就分解了switch，然后将父类的函数声明为abstract
+
+同理也要拆分getFrequentRenterPoints
+
+# 第十二步
+以上就是所有的修改，通过这些修改，当我们无论修改价格还是积分或者影片类型等的时候，都可以很简单的进行修改，不会影响到其他的类。
