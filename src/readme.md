@@ -38,3 +38,6 @@ htmlStatement
 在自己的生命周期内是可以改变自己的类型的，但是对象却不可以改变类，这就尴尬了，因此需要用到state设计模式。
 
 首先我们用一个函数setPriceCode(priceCode)来代替_priceCode，然后新创建一个price类，这样就解决了上面的问题，用状态解决了问题。
+
+# 第十步
+下面我们将getCharge搬迁到Price类里面去。
