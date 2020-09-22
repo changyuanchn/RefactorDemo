@@ -33,3 +33,8 @@ htmlStatement
 
 同理这里面getFrequentRenterPoints也用到了Movie类的数据，一样的做一下搬迁
 
+# 第九步
+下面可以将不同的电影类型作为子类来分别处理，这样每个类型就有自己的计费方法了，这样就能解决掉switch语句了。但是这样也有个问题，就是每个movie实际上
+在自己的生命周期内是可以改变自己的类型的，但是对象却不可以改变类，这就尴尬了，因此需要用到state设计模式。
+
+首先我们用一个函数setPriceCode(priceCode)来代替_priceCode，然后新创建一个price类，这样就解决了上面的问题，用状态解决了问题。
