@@ -6,8 +6,7 @@
 局部变量为each和thisAmount。thisAmount在switch语句中使用，因此可以将其抽出成为函数。
 
 # 第二步
-我们上面抽取出来的函数实际上一些命名非常糟糕，比如each, thisAmount，我们要修正它们。
-
+我们上面抽取出来的函数实际上一些命名非常糟糕，比如each, thisAmount，我们要修正它们
 # 第三步
 我们抽取出来的函数跟customer没有任何关系，它利用来自rental的信息，因此把它放在customer里面并不合适，因此将其移动到Rental类中
 然后修改适配。
@@ -27,4 +26,10 @@ int frequentRenterPoints = 0;
 # 第七步
 经过上面的重构，当我们再添加一个功能的时候，就很简单了，而且如果要修改一个计费逻辑的话，就只需要修改一处代码即可。
 htmlStatement
+
+# 第八步
+下面要处理的是switch语句，一般来说不要在另一个对象的属性基础上使用switch语句，即使不得不使用的场景下，也要在对象自己的数据属性上使用。
+我们的switch在Rental类里面，但是用到了movie的属性数据，这暗示我们要将getCharge移动到Movie里面。因此这一步我们就来处理这个问题
+
+同理这里面getFrequentRenterPoints也用到了Movie类的数据，一样的做一下搬迁
 
